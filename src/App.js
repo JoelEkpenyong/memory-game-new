@@ -36,6 +36,7 @@ export default class App extends React.Component {
 		cards = shuffle(cards);
 		this.state = { cards, noClick: false };
 		this.handleClick = this.handleClick.bind(this);
+		this.handleNewGame = this.handleNewGame.bind(this);
 	}
 
 	handleClick(id) {
@@ -54,6 +55,15 @@ export default class App extends React.Component {
 		});
 	}
 
+	handleNewGame() {
+		let cards = this.state.cards.map((c) => ({
+			...c,
+			cardState: CardState.HIDING
+		}));
+		cards = shuffle(cards);
+		this.setState({ cards });
+	}
+
 	render() {
 		const card = this.state.cards.map((card, i) => (
 			<Card
@@ -65,7 +75,7 @@ export default class App extends React.Component {
 		));
 		return (
 			<div>
-				<Navbar />
+				<Navbar onNewGame={this.handleNewGame} />
 				{card}
 			</div>
 		);
