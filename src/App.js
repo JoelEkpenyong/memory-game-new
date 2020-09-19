@@ -77,7 +77,7 @@ export default class App extends React.Component {
 				setTimeout(() => {
 					// set the state of the cards to HIDING after 1.3 seconds
 					this.setState({ cards: hidingCards, noClick: false });
-				}, 1300);
+				}, 400);
 			});
 			return;
 		}
