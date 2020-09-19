@@ -1,7 +1,12 @@
 .card-container {
 	height: 95vh;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: start;
-	justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+	.card-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: start;
+		justify-content: center;
+	}
 }
