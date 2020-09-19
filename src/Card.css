@@ -11,8 +11,8 @@
 
 @media screen and (max-width: 500px) {
 	.card {
-		height: 2%;
-		width: 5%;
+		height: 10%;
+		width: 15%;
 		min-width: inherit;
 	}
 }
