@@ -5,7 +5,7 @@ import './Card.css';
 export default function Card(props) {
 	let style = {};
 	if (props.showing) style.backgroundColor = props.backgroundColor;
-	return <div onClick={props.onClick} className="card-container" style={style} />;
+	return <div onClick={props.onClick} className="card" style={style} />;
 }
 
 Card.propTypes = {

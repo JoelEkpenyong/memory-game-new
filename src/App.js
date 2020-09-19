@@ -2,6 +2,7 @@ import React from 'react';
 import shuffle from 'shuffle-array';
 import Card from './Card';
 import Navbar from './Navbar';
+import './App.css';
 
 const CardState = {
 	HIDING: 0,
@@ -103,11 +104,11 @@ export default class App extends React.Component {
 				onClick={() => this.handleClick(card.id)}
 			/>
 		));
-		return (
-			<div>
-				<Navbar onNewGame={this.handleNewGame} />
+		return [
+			<Navbar key="navbar" onNewGame={this.handleNewGame} />,
+			<div key="cardist" className="card-container">
 				{card}
 			</div>
-		);
+		];
 	}
 }
