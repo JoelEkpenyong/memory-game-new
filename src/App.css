@@ -1,3 +1,7 @@
 .card-container {
 	height: 95vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: start;
+	justify-content: center;
 }
