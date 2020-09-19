@@ -6,5 +6,13 @@
 	background-color: grey;
 	border: 6px solid grey;
 	border-radius: 25px;
-	/* display: inline-block; */
+	display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+	.card {
+		height: 2%;
+		width: 5%;
+		min-width: inherit;
+	}
 }
